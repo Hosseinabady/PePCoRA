@@ -1,0 +1,874 @@
+ParallelRegion.lo: ParallelRegion.cc ParallelRegion.h BarrierBlock.h \
+ ../../config.h /usr/local/llvm-3.5.0/include/llvm/IR/BasicBlock.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/Twine.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/StringRef.h \
+ /usr/include/c++/4.9.2/algorithm /usr/include/c++/4.9.2/utility \
+ /usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/c++config.h \
+ /usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/os_defines.h \
+ /usr/include/features.h /usr/include/arm-linux-gnueabihf/bits/predefs.h \
+ /usr/include/arm-linux-gnueabihf/sys/cdefs.h \
+ /usr/include/arm-linux-gnueabihf/bits/wordsize.h \
+ /usr/include/arm-linux-gnueabihf/gnu/stubs.h \
+ /usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/cpu_defines.h \
+ /usr/include/c++/4.9.2/bits/stl_relops.h \
+ /usr/include/c++/4.9.2/bits/stl_pair.h \
+ /usr/include/c++/4.9.2/bits/move.h \
+ /usr/include/c++/4.9.2/bits/concept_check.h \
+ /usr/include/c++/4.9.2/type_traits \
+ /usr/include/c++/4.9.2/initializer_list \
+ /usr/include/c++/4.9.2/bits/stl_algobase.h \
+ /usr/include/c++/4.9.2/bits/functexcept.h \
+ /usr/include/c++/4.9.2/bits/exception_defines.h \
+ /usr/include/c++/4.9.2/bits/cpp_type_traits.h \
+ /usr/include/c++/4.9.2/ext/type_traits.h \
+ /usr/include/c++/4.9.2/ext/numeric_traits.h \
+ /usr/include/c++/4.9.2/bits/stl_iterator_base_types.h \
+ /usr/include/c++/4.9.2/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/4.9.2/debug/debug.h \
+ /usr/include/c++/4.9.2/bits/stl_iterator.h \
+ /usr/include/c++/4.9.2/bits/ptr_traits.h \
+ /usr/include/c++/4.9.2/bits/predefined_ops.h \
+ /usr/include/c++/4.9.2/bits/stl_algo.h /usr/include/c++/4.9.2/cstdlib \
+ /usr/include/stdlib.h \
+ /usr/lib/gcc/armv7l-unknown-linux-gnueabihf/4.9.2/include/stddef.h \
+ /usr/include/arm-linux-gnueabihf/bits/waitflags.h \
+ /usr/include/arm-linux-gnueabihf/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/arm-linux-gnueabihf/bits/endian.h \
+ /usr/include/arm-linux-gnueabihf/bits/byteswap.h /usr/include/xlocale.h \
+ /usr/include/arm-linux-gnueabihf/sys/types.h \
+ /usr/include/arm-linux-gnueabihf/bits/types.h \
+ /usr/include/arm-linux-gnueabihf/bits/typesizes.h /usr/include/time.h \
+ /usr/include/arm-linux-gnueabihf/sys/select.h \
+ /usr/include/arm-linux-gnueabihf/bits/select.h \
+ /usr/include/arm-linux-gnueabihf/bits/sigset.h \
+ /usr/include/arm-linux-gnueabihf/bits/time.h \
+ /usr/include/arm-linux-gnueabihf/sys/sysmacros.h \
+ /usr/include/arm-linux-gnueabihf/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/c++/4.9.2/bits/algorithmfwd.h \
+ /usr/include/c++/4.9.2/bits/stl_heap.h \
+ /usr/include/c++/4.9.2/bits/stl_tempbuf.h \
+ /usr/include/c++/4.9.2/bits/stl_construct.h /usr/include/c++/4.9.2/new \
+ /usr/include/c++/4.9.2/exception \
+ /usr/include/c++/4.9.2/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.9.2/bits/exception_ptr.h \
+ /usr/include/c++/4.9.2/bits/nested_exception.h \
+ /usr/include/c++/4.9.2/ext/alloc_traits.h \
+ /usr/include/c++/4.9.2/bits/alloc_traits.h \
+ /usr/include/c++/4.9.2/bits/memoryfwd.h /usr/include/c++/4.9.2/random \
+ /usr/include/c++/4.9.2/cmath /usr/include/math.h \
+ /usr/include/arm-linux-gnueabihf/bits/huge_val.h \
+ /usr/include/arm-linux-gnueabihf/bits/huge_valf.h \
+ /usr/include/arm-linux-gnueabihf/bits/huge_vall.h \
+ /usr/include/arm-linux-gnueabihf/bits/inf.h \
+ /usr/include/arm-linux-gnueabihf/bits/nan.h \
+ /usr/include/arm-linux-gnueabihf/bits/mathdef.h \
+ /usr/include/arm-linux-gnueabihf/bits/mathcalls.h \
+ /usr/include/arm-linux-gnueabihf/bits/mathinline.h \
+ /usr/include/c++/4.9.2/string /usr/include/c++/4.9.2/bits/stringfwd.h \
+ /usr/include/c++/4.9.2/bits/char_traits.h \
+ /usr/include/c++/4.9.2/bits/postypes.h /usr/include/c++/4.9.2/cwchar \
+ /usr/include/wchar.h /usr/include/stdio.h \
+ /usr/lib/gcc/armv7l-unknown-linux-gnueabihf/4.9.2/include/stdarg.h \
+ /usr/include/arm-linux-gnueabihf/bits/wchar.h \
+ /usr/include/c++/4.9.2/cstdint \
+ /usr/lib/gcc/armv7l-unknown-linux-gnueabihf/4.9.2/include/stdint.h \
+ /usr/include/stdint.h /usr/include/c++/4.9.2/bits/allocator.h \
+ /usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/c++allocator.h \
+ /usr/include/c++/4.9.2/ext/new_allocator.h \
+ /usr/include/c++/4.9.2/bits/localefwd.h \
+ /usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/c++locale.h \
+ /usr/include/c++/4.9.2/clocale /usr/include/locale.h \
+ /usr/include/arm-linux-gnueabihf/bits/locale.h \
+ /usr/include/c++/4.9.2/iosfwd /usr/include/c++/4.9.2/cctype \
+ /usr/include/ctype.h /usr/include/c++/4.9.2/bits/ostream_insert.h \
+ /usr/include/c++/4.9.2/bits/cxxabi_forced.h \
+ /usr/include/c++/4.9.2/bits/stl_function.h \
+ /usr/include/c++/4.9.2/backward/binders.h \
+ /usr/include/c++/4.9.2/bits/range_access.h \
+ /usr/include/c++/4.9.2/bits/basic_string.h \
+ /usr/include/c++/4.9.2/ext/atomicity.h \
+ /usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/gthr.h \
+ /usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/gthr-default.h \
+ /usr/include/pthread.h /usr/include/sched.h \
+ /usr/include/arm-linux-gnueabihf/bits/sched.h \
+ /usr/include/arm-linux-gnueabihf/bits/timex.h \
+ /usr/include/arm-linux-gnueabihf/bits/setjmp.h \
+ /usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/atomic_word.h \
+ /usr/include/c++/4.9.2/ext/string_conversions.h \
+ /usr/include/c++/4.9.2/cstdio /usr/include/libio.h \
+ /usr/include/_G_config.h \
+ /usr/include/arm-linux-gnueabihf/bits/stdio_lim.h \
+ /usr/include/arm-linux-gnueabihf/bits/sys_errlist.h \
+ /usr/include/arm-linux-gnueabihf/bits/stdio.h \
+ /usr/include/c++/4.9.2/cerrno /usr/include/errno.h \
+ /usr/include/arm-linux-gnueabihf/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/arm-linux-gnueabihf/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.9.2/bits/functional_hash.h \
+ /usr/include/c++/4.9.2/bits/hash_bytes.h \
+ /usr/include/c++/4.9.2/bits/basic_string.tcc \
+ /usr/include/c++/4.9.2/limits /usr/include/c++/4.9.2/bits/random.h \
+ /usr/include/c++/4.9.2/vector \
+ /usr/include/c++/4.9.2/bits/stl_uninitialized.h \
+ /usr/include/c++/4.9.2/bits/stl_vector.h \
+ /usr/include/c++/4.9.2/bits/stl_bvector.h \
+ /usr/include/c++/4.9.2/bits/vector.tcc \
+ /usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/opt_random.h \
+ /usr/include/c++/4.9.2/bits/random.tcc /usr/include/c++/4.9.2/numeric \
+ /usr/include/c++/4.9.2/bits/stl_numeric.h /usr/include/c++/4.9.2/cassert \
+ /usr/include/assert.h /usr/include/c++/4.9.2/cstring \
+ /usr/include/string.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/DataTypes.h \
+ /usr/include/inttypes.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/ErrorHandling.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/Compiler.h \
+ /usr/local/llvm-3.5.0/include/llvm/Config/llvm-config.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/ilist.h \
+ /usr/include/c++/4.9.2/cstddef /usr/include/c++/4.9.2/iterator \
+ /usr/include/c++/4.9.2/ostream /usr/include/c++/4.9.2/ios \
+ /usr/include/c++/4.9.2/bits/ios_base.h \
+ /usr/include/c++/4.9.2/bits/locale_classes.h \
+ /usr/include/c++/4.9.2/bits/locale_classes.tcc \
+ /usr/include/c++/4.9.2/streambuf \
+ /usr/include/c++/4.9.2/bits/streambuf.tcc \
+ /usr/include/c++/4.9.2/bits/basic_ios.h \
+ /usr/include/c++/4.9.2/bits/locale_facets.h \
+ /usr/include/c++/4.9.2/cwctype /usr/include/wctype.h \
+ /usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/ctype_base.h \
+ /usr/include/c++/4.9.2/bits/streambuf_iterator.h \
+ /usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/ctype_inline.h \
+ /usr/include/c++/4.9.2/bits/locale_facets.tcc \
+ /usr/include/c++/4.9.2/bits/basic_ios.tcc \
+ /usr/include/c++/4.9.2/bits/ostream.tcc /usr/include/c++/4.9.2/istream \
+ /usr/include/c++/4.9.2/bits/istream.tcc \
+ /usr/include/c++/4.9.2/bits/stream_iterator.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/Instruction.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/ArrayRef.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/None.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/SmallVector.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/iterator_range.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/AlignOf.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/MathExtras.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/SwapByteOrder.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/type_traits.h \
+ /usr/include/c++/4.9.2/memory \
+ /usr/include/c++/4.9.2/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/4.9.2/typeinfo /usr/include/c++/4.9.2/ext/concurrence.h \
+ /usr/include/c++/4.9.2/bits/uses_allocator.h \
+ /usr/include/c++/4.9.2/functional /usr/include/c++/4.9.2/tuple \
+ /usr/include/c++/4.9.2/array /usr/include/c++/4.9.2/stdexcept \
+ /usr/include/c++/4.9.2/bits/unique_ptr.h \
+ /usr/include/c++/4.9.2/bits/shared_ptr.h \
+ /usr/include/c++/4.9.2/bits/shared_ptr_base.h \
+ /usr/include/c++/4.9.2/ext/aligned_buffer.h \
+ /usr/include/c++/4.9.2/backward/auto_ptr.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/ilist_node.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/DebugLoc.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/User.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/iterator.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/Value.h \
+ /usr/local/llvm-3.5.0/include/llvm-c/Core.h \
+ /usr/local/llvm-3.5.0/include/llvm-c/Support.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/Use.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/PointerIntPair.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/PointerLikeTypeTraits.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/CBindingWrapping.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/Casting.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/Instruction.def \
+ /usr/local/llvm-3.5.0/include/llvm/IR/SymbolTableListTraits.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/LLVMContext.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/CFG.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/GraphTraits.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/Function.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/Argument.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/Attributes.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/FoldingSet.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/Allocator.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/Memory.h \
+ /usr/include/c++/4.9.2/system_error \
+ /usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/error_constants.h \
+ /usr/include/c++/4.9.2/bitset /usr/include/c++/4.9.2/map \
+ /usr/include/c++/4.9.2/bits/stl_tree.h \
+ /usr/include/c++/4.9.2/bits/stl_map.h \
+ /usr/include/c++/4.9.2/bits/stl_multimap.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/CallingConv.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/GlobalObject.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/Constant.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/DerivedTypes.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/Type.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/APFloat.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/APInt.h \
+ /usr/include/c++/4.9.2/climits \
+ /usr/lib/gcc/armv7l-unknown-linux-gnueabihf/4.9.2/include-fixed/limits.h \
+ /usr/lib/gcc/armv7l-unknown-linux-gnueabihf/4.9.2/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/arm-linux-gnueabihf/bits/posix1_lim.h \
+ /usr/include/arm-linux-gnueabihf/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/arm-linux-gnueabihf/bits/posix2_lim.h \
+ /usr/include/arm-linux-gnueabihf/bits/xopen_lim.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/SmallPtrSet.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/GlobalValue.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/InstrTypes.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/OperandTraits.h \
+ /usr/local/llvm-3.5.0/include/llvm/Transforms/Utils/ValueMapper.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/ValueMap.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/DenseMap.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/DenseMapInfo.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/ValueHandle.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/Mutex.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/Threading.h \
+ /usr/include/c++/4.9.2/sstream /usr/include/c++/4.9.2/bits/sstream.tcc \
+ Barrier.h /usr/local/llvm-3.5.0/include/llvm/IR/Instructions.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/Module.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/Comdat.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/DataLayout.h \
+ /usr/local/llvm-3.5.0/include/llvm/Pass.h \
+ /usr/local/llvm-3.5.0/include/llvm/PassSupport.h \
+ /usr/local/llvm-3.5.0/include/llvm/Pass.h \
+ /usr/local/llvm-3.5.0/include/llvm/InitializePasses.h \
+ /usr/local/llvm-3.5.0/include/llvm/PassInfo.h \
+ /usr/local/llvm-3.5.0/include/llvm/PassRegistry.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/StringMap.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/RWMutex.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/Atomic.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/Valgrind.h \
+ /usr/local/llvm-3.5.0/include/llvm/PassAnalysisSupport.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/GlobalAlias.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/GlobalVariable.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/Metadata.h Kernel.h \
+ /usr/local/llvm-3.5.0/include/llvm/Analysis/LoopInfo.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/DenseSet.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/Dominators.h \
+ /usr/local/llvm-3.5.0/include/llvm/ADT/DepthFirstIterator.h \
+ /usr/include/c++/4.9.2/set /usr/include/c++/4.9.2/bits/stl_set.h \
+ /usr/include/c++/4.9.2/bits/stl_multiset.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/GenericDomTree.h \
+ /usr/local/llvm-3.5.0/include/llvm/Support/raw_ostream.h \
+ ../../include/pocl.h ../../include/CL/opencl.h ../../fix-include/CL/cl.h \
+ ../../include/CL/cl.h ../../fix-include/CL/cl_platform.h \
+ ../../include/CL/cl_platform.h ../../fix-include/CL/cl_gl.h \
+ ../../include/CL/cl_gl.h ../../include/CL/cl_gl_ext.h \
+ ../../include/CL/cl_ext.h ../../include/pocl_device.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/IRBuilder.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/ConstantFolder.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/Constants.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/Operator.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/GetElementPtrTypeIterator.h \
+ /usr/local/llvm-3.5.0/include/llvm/IR/ValueSymbolTable.h \
+ /usr/local/llvm-3.5.0/include/llvm/Transforms/Utils/BasicBlockUtils.h \
+ /usr/local/llvm-3.5.0/include/llvm/Transforms/Utils/Cloning.h \
+ /usr/include/c++/4.9.2/iostream
+
+ParallelRegion.h:
+
+BarrierBlock.h:
+
+../../config.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/BasicBlock.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/Twine.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/StringRef.h:
+
+/usr/include/c++/4.9.2/algorithm:
+
+/usr/include/c++/4.9.2/utility:
+
+/usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/c++config.h:
+
+/usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/os_defines.h:
+
+/usr/include/features.h:
+
+/usr/include/arm-linux-gnueabihf/bits/predefs.h:
+
+/usr/include/arm-linux-gnueabihf/sys/cdefs.h:
+
+/usr/include/arm-linux-gnueabihf/bits/wordsize.h:
+
+/usr/include/arm-linux-gnueabihf/gnu/stubs.h:
+
+/usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/cpu_defines.h:
+
+/usr/include/c++/4.9.2/bits/stl_relops.h:
+
+/usr/include/c++/4.9.2/bits/stl_pair.h:
+
+/usr/include/c++/4.9.2/bits/move.h:
+
+/usr/include/c++/4.9.2/bits/concept_check.h:
+
+/usr/include/c++/4.9.2/type_traits:
+
+/usr/include/c++/4.9.2/initializer_list:
+
+/usr/include/c++/4.9.2/bits/stl_algobase.h:
+
+/usr/include/c++/4.9.2/bits/functexcept.h:
+
+/usr/include/c++/4.9.2/bits/exception_defines.h:
+
+/usr/include/c++/4.9.2/bits/cpp_type_traits.h:
+
+/usr/include/c++/4.9.2/ext/type_traits.h:
+
+/usr/include/c++/4.9.2/ext/numeric_traits.h:
+
+/usr/include/c++/4.9.2/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/4.9.2/bits/stl_iterator_base_funcs.h:
+
+/usr/include/c++/4.9.2/debug/debug.h:
+
+/usr/include/c++/4.9.2/bits/stl_iterator.h:
+
+/usr/include/c++/4.9.2/bits/ptr_traits.h:
+
+/usr/include/c++/4.9.2/bits/predefined_ops.h:
+
+/usr/include/c++/4.9.2/bits/stl_algo.h:
+
+/usr/include/c++/4.9.2/cstdlib:
+
+/usr/include/stdlib.h:
+
+/usr/lib/gcc/armv7l-unknown-linux-gnueabihf/4.9.2/include/stddef.h:
+
+/usr/include/arm-linux-gnueabihf/bits/waitflags.h:
+
+/usr/include/arm-linux-gnueabihf/bits/waitstatus.h:
+
+/usr/include/endian.h:
+
+/usr/include/arm-linux-gnueabihf/bits/endian.h:
+
+/usr/include/arm-linux-gnueabihf/bits/byteswap.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/arm-linux-gnueabihf/sys/types.h:
+
+/usr/include/arm-linux-gnueabihf/bits/types.h:
+
+/usr/include/arm-linux-gnueabihf/bits/typesizes.h:
+
+/usr/include/time.h:
+
+/usr/include/arm-linux-gnueabihf/sys/select.h:
+
+/usr/include/arm-linux-gnueabihf/bits/select.h:
+
+/usr/include/arm-linux-gnueabihf/bits/sigset.h:
+
+/usr/include/arm-linux-gnueabihf/bits/time.h:
+
+/usr/include/arm-linux-gnueabihf/sys/sysmacros.h:
+
+/usr/include/arm-linux-gnueabihf/bits/pthreadtypes.h:
+
+/usr/include/alloca.h:
+
+/usr/include/c++/4.9.2/bits/algorithmfwd.h:
+
+/usr/include/c++/4.9.2/bits/stl_heap.h:
+
+/usr/include/c++/4.9.2/bits/stl_tempbuf.h:
+
+/usr/include/c++/4.9.2/bits/stl_construct.h:
+
+/usr/include/c++/4.9.2/new:
+
+/usr/include/c++/4.9.2/exception:
+
+/usr/include/c++/4.9.2/bits/atomic_lockfree_defines.h:
+
+/usr/include/c++/4.9.2/bits/exception_ptr.h:
+
+/usr/include/c++/4.9.2/bits/nested_exception.h:
+
+/usr/include/c++/4.9.2/ext/alloc_traits.h:
+
+/usr/include/c++/4.9.2/bits/alloc_traits.h:
+
+/usr/include/c++/4.9.2/bits/memoryfwd.h:
+
+/usr/include/c++/4.9.2/random:
+
+/usr/include/c++/4.9.2/cmath:
+
+/usr/include/math.h:
+
+/usr/include/arm-linux-gnueabihf/bits/huge_val.h:
+
+/usr/include/arm-linux-gnueabihf/bits/huge_valf.h:
+
+/usr/include/arm-linux-gnueabihf/bits/huge_vall.h:
+
+/usr/include/arm-linux-gnueabihf/bits/inf.h:
+
+/usr/include/arm-linux-gnueabihf/bits/nan.h:
+
+/usr/include/arm-linux-gnueabihf/bits/mathdef.h:
+
+/usr/include/arm-linux-gnueabihf/bits/mathcalls.h:
+
+/usr/include/arm-linux-gnueabihf/bits/mathinline.h:
+
+/usr/include/c++/4.9.2/string:
+
+/usr/include/c++/4.9.2/bits/stringfwd.h:
+
+/usr/include/c++/4.9.2/bits/char_traits.h:
+
+/usr/include/c++/4.9.2/bits/postypes.h:
+
+/usr/include/c++/4.9.2/cwchar:
+
+/usr/include/wchar.h:
+
+/usr/include/stdio.h:
+
+/usr/lib/gcc/armv7l-unknown-linux-gnueabihf/4.9.2/include/stdarg.h:
+
+/usr/include/arm-linux-gnueabihf/bits/wchar.h:
+
+/usr/include/c++/4.9.2/cstdint:
+
+/usr/lib/gcc/armv7l-unknown-linux-gnueabihf/4.9.2/include/stdint.h:
+
+/usr/include/stdint.h:
+
+/usr/include/c++/4.9.2/bits/allocator.h:
+
+/usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/c++allocator.h:
+
+/usr/include/c++/4.9.2/ext/new_allocator.h:
+
+/usr/include/c++/4.9.2/bits/localefwd.h:
+
+/usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/c++locale.h:
+
+/usr/include/c++/4.9.2/clocale:
+
+/usr/include/locale.h:
+
+/usr/include/arm-linux-gnueabihf/bits/locale.h:
+
+/usr/include/c++/4.9.2/iosfwd:
+
+/usr/include/c++/4.9.2/cctype:
+
+/usr/include/ctype.h:
+
+/usr/include/c++/4.9.2/bits/ostream_insert.h:
+
+/usr/include/c++/4.9.2/bits/cxxabi_forced.h:
+
+/usr/include/c++/4.9.2/bits/stl_function.h:
+
+/usr/include/c++/4.9.2/backward/binders.h:
+
+/usr/include/c++/4.9.2/bits/range_access.h:
+
+/usr/include/c++/4.9.2/bits/basic_string.h:
+
+/usr/include/c++/4.9.2/ext/atomicity.h:
+
+/usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/gthr.h:
+
+/usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/gthr-default.h:
+
+/usr/include/pthread.h:
+
+/usr/include/sched.h:
+
+/usr/include/arm-linux-gnueabihf/bits/sched.h:
+
+/usr/include/arm-linux-gnueabihf/bits/timex.h:
+
+/usr/include/arm-linux-gnueabihf/bits/setjmp.h:
+
+/usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/atomic_word.h:
+
+/usr/include/c++/4.9.2/ext/string_conversions.h:
+
+/usr/include/c++/4.9.2/cstdio:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/arm-linux-gnueabihf/bits/stdio_lim.h:
+
+/usr/include/arm-linux-gnueabihf/bits/sys_errlist.h:
+
+/usr/include/arm-linux-gnueabihf/bits/stdio.h:
+
+/usr/include/c++/4.9.2/cerrno:
+
+/usr/include/errno.h:
+
+/usr/include/arm-linux-gnueabihf/bits/errno.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/arm-linux-gnueabihf/asm/errno.h:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/c++/4.9.2/bits/functional_hash.h:
+
+/usr/include/c++/4.9.2/bits/hash_bytes.h:
+
+/usr/include/c++/4.9.2/bits/basic_string.tcc:
+
+/usr/include/c++/4.9.2/limits:
+
+/usr/include/c++/4.9.2/bits/random.h:
+
+/usr/include/c++/4.9.2/vector:
+
+/usr/include/c++/4.9.2/bits/stl_uninitialized.h:
+
+/usr/include/c++/4.9.2/bits/stl_vector.h:
+
+/usr/include/c++/4.9.2/bits/stl_bvector.h:
+
+/usr/include/c++/4.9.2/bits/vector.tcc:
+
+/usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/opt_random.h:
+
+/usr/include/c++/4.9.2/bits/random.tcc:
+
+/usr/include/c++/4.9.2/numeric:
+
+/usr/include/c++/4.9.2/bits/stl_numeric.h:
+
+/usr/include/c++/4.9.2/cassert:
+
+/usr/include/assert.h:
+
+/usr/include/c++/4.9.2/cstring:
+
+/usr/include/string.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/DataTypes.h:
+
+/usr/include/inttypes.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/ErrorHandling.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/Compiler.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Config/llvm-config.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/ilist.h:
+
+/usr/include/c++/4.9.2/cstddef:
+
+/usr/include/c++/4.9.2/iterator:
+
+/usr/include/c++/4.9.2/ostream:
+
+/usr/include/c++/4.9.2/ios:
+
+/usr/include/c++/4.9.2/bits/ios_base.h:
+
+/usr/include/c++/4.9.2/bits/locale_classes.h:
+
+/usr/include/c++/4.9.2/bits/locale_classes.tcc:
+
+/usr/include/c++/4.9.2/streambuf:
+
+/usr/include/c++/4.9.2/bits/streambuf.tcc:
+
+/usr/include/c++/4.9.2/bits/basic_ios.h:
+
+/usr/include/c++/4.9.2/bits/locale_facets.h:
+
+/usr/include/c++/4.9.2/cwctype:
+
+/usr/include/wctype.h:
+
+/usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/ctype_base.h:
+
+/usr/include/c++/4.9.2/bits/streambuf_iterator.h:
+
+/usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/ctype_inline.h:
+
+/usr/include/c++/4.9.2/bits/locale_facets.tcc:
+
+/usr/include/c++/4.9.2/bits/basic_ios.tcc:
+
+/usr/include/c++/4.9.2/bits/ostream.tcc:
+
+/usr/include/c++/4.9.2/istream:
+
+/usr/include/c++/4.9.2/bits/istream.tcc:
+
+/usr/include/c++/4.9.2/bits/stream_iterator.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/Instruction.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/ArrayRef.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/None.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/SmallVector.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/iterator_range.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/AlignOf.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/MathExtras.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/SwapByteOrder.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/type_traits.h:
+
+/usr/include/c++/4.9.2/memory:
+
+/usr/include/c++/4.9.2/bits/stl_raw_storage_iter.h:
+
+/usr/include/c++/4.9.2/typeinfo:
+
+/usr/include/c++/4.9.2/ext/concurrence.h:
+
+/usr/include/c++/4.9.2/bits/uses_allocator.h:
+
+/usr/include/c++/4.9.2/functional:
+
+/usr/include/c++/4.9.2/tuple:
+
+/usr/include/c++/4.9.2/array:
+
+/usr/include/c++/4.9.2/stdexcept:
+
+/usr/include/c++/4.9.2/bits/unique_ptr.h:
+
+/usr/include/c++/4.9.2/bits/shared_ptr.h:
+
+/usr/include/c++/4.9.2/bits/shared_ptr_base.h:
+
+/usr/include/c++/4.9.2/ext/aligned_buffer.h:
+
+/usr/include/c++/4.9.2/backward/auto_ptr.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/ilist_node.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/DebugLoc.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/User.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/iterator.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/Value.h:
+
+/usr/local/llvm-3.5.0/include/llvm-c/Core.h:
+
+/usr/local/llvm-3.5.0/include/llvm-c/Support.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/Use.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/PointerIntPair.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/PointerLikeTypeTraits.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/CBindingWrapping.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/Casting.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/Instruction.def:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/SymbolTableListTraits.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/LLVMContext.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/CFG.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/GraphTraits.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/Function.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/Argument.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/Attributes.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/FoldingSet.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/Allocator.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/Memory.h:
+
+/usr/include/c++/4.9.2/system_error:
+
+/usr/include/c++/4.9.2/armv7l-unknown-linux-gnueabihf/bits/error_constants.h:
+
+/usr/include/c++/4.9.2/bitset:
+
+/usr/include/c++/4.9.2/map:
+
+/usr/include/c++/4.9.2/bits/stl_tree.h:
+
+/usr/include/c++/4.9.2/bits/stl_map.h:
+
+/usr/include/c++/4.9.2/bits/stl_multimap.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/CallingConv.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/GlobalObject.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/Constant.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/DerivedTypes.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/Type.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/APFloat.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/APInt.h:
+
+/usr/include/c++/4.9.2/climits:
+
+/usr/lib/gcc/armv7l-unknown-linux-gnueabihf/4.9.2/include-fixed/limits.h:
+
+/usr/lib/gcc/armv7l-unknown-linux-gnueabihf/4.9.2/include-fixed/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/arm-linux-gnueabihf/bits/posix1_lim.h:
+
+/usr/include/arm-linux-gnueabihf/bits/local_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/arm-linux-gnueabihf/bits/posix2_lim.h:
+
+/usr/include/arm-linux-gnueabihf/bits/xopen_lim.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/SmallPtrSet.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/GlobalValue.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/InstrTypes.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/OperandTraits.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Transforms/Utils/ValueMapper.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/ValueMap.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/DenseMap.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/DenseMapInfo.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/ValueHandle.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/Mutex.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/Threading.h:
+
+/usr/include/c++/4.9.2/sstream:
+
+/usr/include/c++/4.9.2/bits/sstream.tcc:
+
+Barrier.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/Instructions.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/Module.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/Comdat.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/DataLayout.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Pass.h:
+
+/usr/local/llvm-3.5.0/include/llvm/PassSupport.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Pass.h:
+
+/usr/local/llvm-3.5.0/include/llvm/InitializePasses.h:
+
+/usr/local/llvm-3.5.0/include/llvm/PassInfo.h:
+
+/usr/local/llvm-3.5.0/include/llvm/PassRegistry.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/StringMap.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/RWMutex.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/Atomic.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/Valgrind.h:
+
+/usr/local/llvm-3.5.0/include/llvm/PassAnalysisSupport.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/GlobalAlias.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/GlobalVariable.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/Metadata.h:
+
+Kernel.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Analysis/LoopInfo.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/DenseSet.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/Dominators.h:
+
+/usr/local/llvm-3.5.0/include/llvm/ADT/DepthFirstIterator.h:
+
+/usr/include/c++/4.9.2/set:
+
+/usr/include/c++/4.9.2/bits/stl_set.h:
+
+/usr/include/c++/4.9.2/bits/stl_multiset.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/GenericDomTree.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Support/raw_ostream.h:
+
+../../include/pocl.h:
+
+../../include/CL/opencl.h:
+
+../../fix-include/CL/cl.h:
+
+../../include/CL/cl.h:
+
+../../fix-include/CL/cl_platform.h:
+
+../../include/CL/cl_platform.h:
+
+../../fix-include/CL/cl_gl.h:
+
+../../include/CL/cl_gl.h:
+
+../../include/CL/cl_gl_ext.h:
+
+../../include/CL/cl_ext.h:
+
+../../include/pocl_device.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/IRBuilder.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/ConstantFolder.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/Constants.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/Operator.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/GetElementPtrTypeIterator.h:
+
+/usr/local/llvm-3.5.0/include/llvm/IR/ValueSymbolTable.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Transforms/Utils/BasicBlockUtils.h:
+
+/usr/local/llvm-3.5.0/include/llvm/Transforms/Utils/Cloning.h:
+
+/usr/include/c++/4.9.2/iostream:

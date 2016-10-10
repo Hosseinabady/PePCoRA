@@ -1,0 +1,11 @@
+prefix=/usr/local/pocl-0.11
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Portable Computing Language
+Description: Portable Computing Language
+Version: 0.11
+Libs: -L${libdir} -lpocl  
+Cflags: -I${includedir} -I${prefix}/share/pocl/include -pthread
+

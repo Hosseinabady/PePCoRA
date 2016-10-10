@@ -1,0 +1,57 @@
+to add zynq_basic device into the compilation process these file should be modified
+
+1- configure.ac
+2- lib/CL/devices/Makefile.am
+3- lib/CL/devices/Makefile.in  
+4- lib/CL/devices/devices.c
+5- the hw  check part in the configure file should be like this
+
+pkg_failed=no
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for HWLOC" >&5
+$as_echo_n "checking for HWLOC... " >&6; }
+
+if test -n "$HWLOC_CFLAGS"; then
+    pkg_cv_HWLOC_CFLAGS="$HWLOC_CFLAGS"
+ elif test -n "$PKG_CONFIG"; then
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"hwloc >= 1.0\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "hwloc >= 1.0") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_HWLOC_CFLAGS=`$PKG_CONFIG --cflags "hwloc >= 1.0" 2>/dev/null`
+                      test "x$?" != "x0" && pkg_failed=yes
+else
+  pkg_failed=yes
+fi
+ else
+    pkg_failed=untried
+fi
+if test -n "$HWLOC_LIBS"; then
+    pkg_cv_HWLOC_LIBS="$HWLOC_LIBS"
+ elif test -n "$PKG_CONFIG"; then
+    if test -n "$PKG_CONFIG" && \
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"hwloc >= 1.0\""; } >&5
+  ($PKG_CONFIG --exists --print-errors "hwloc >= 1.0") 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; }; then
+  pkg_cv_HWLOC_LIBS=`$PKG_CONFIG --libs "hwloc >= 1.0" 2>/dev/null`
+                      test "x$?" != "x0" && pkg_failed=yes
+else
+  pkg_failed=yes
+fi
+ else
+    pkg_failed=untried
+fi
+
+ 
+
+
+
+
+
+
+
+
+
