@@ -1,0 +1,16 @@
+#!/bin/bash
+
+insmod fpgacl_device_driver_hp0.ko
+mknod /dev/fpgacl_hp0 c 245 0
+
+insmod fpgacl_device_driver_hp1.ko
+mknod /dev/fpgacl_hp1 c 244 0
+
+insmod fpgacl_device_driver_hp2.ko
+mknod /dev/fpgacl_hp2 c 243 0
+
+insmod fpgacl_device_driver_hp3.ko
+mknod /dev/fpgacl_hp3 c 242 0
+
+insmod fpgacl_device_driver_acp.ko
+mknod /dev/fpgacl_acp c 241 0

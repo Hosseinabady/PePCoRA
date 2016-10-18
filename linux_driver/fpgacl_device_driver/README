@@ -1,0 +1,2 @@
+svn co svn+ssh://192.168.1.64/srv/svn/repositories/pocl-0.11-zynq/ /opt/Mohammad/pocl-zynq/pocl-0.11-zynq/
+gcc nbody_tb.c -lm -L/opt/Mohammad/measurement/power_measurement/lib  -lfpgaclmeasurement -I/opt/Mohammad/measurement/power_measurement/include -pthread -o nbody_tb

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+
+
+rmmod fpgacl_device_driver_hp0
+rm /dev/fpgacl_hp0
+
+rmmod fpgacl_device_driver_hp1
+rm /dev/fpgacl_hp1
+
+rmmod fpgacl_device_driver_hp2
+rm /dev/fpgacl_hp2
+
+rmmod fpgacl_device_driver_hp3
+rm /dev/fpgacl_hp3
+
+rmmod fpgacl_device_driver_acp
+rm /dev/fpgacl_acp
